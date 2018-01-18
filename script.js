@@ -23,7 +23,7 @@ function draw() {
        fill(color_1);
      } else {
          stroke(from);
-         strokeWeight(5s);
+         strokeWeight(5);
          noFill();
      }
    }
