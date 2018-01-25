@@ -30,12 +30,18 @@ h2{
   margin-bottom: 10px;
 }
 
-/*sections*/
-
 .text{
   color:black;
   margin-bottom: 50px;
 }
+
+.reference{
+  font-size:12px;
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+
+/*sections*/
 
 div {
     width: 33%;
