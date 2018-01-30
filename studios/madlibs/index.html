@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<title>Hip Hop Valentine</title>
 	<link href="stylesheet.css" rel="stylesheet"/>
-	<script src='script.js' type="text/javascript"></script>
 	<link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel ="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -15,7 +14,7 @@
 <body>
 	<h1>Hip Hop Valentine</h1>
 	<div id ="picture">
-		<img src="heart.gif">
+		<img src="heart.gif" alt="heart">
 	</div>
 	<article id="form">
 		<form name="mainForm">
@@ -39,23 +38,22 @@
 
 			<!-- Adjective -->
 			<div>
-				<labe for ="adjective">Adjective</label>
+				<label for ="adjective">Adjective</label>
 					<input type="text" name="adjective">
 			</div>
 
 			<div>
-				<labe for ="food">Favorite food</label>
-					<input type="text" name="food">
+				<label for ="food">Favorite food</label>
+				<input type="text" name="food">
+			</div>
+				<!-- reset or submit form -->
+			<div>
+				<input type="reset" value="Nvm" />
+				<input type="submit" value="Send" />
 			</div>
 
-
-				<!-- reset or submit form -->
-				<div>
-					<input type="reset" value="Nvm" />
-					<input type="submit" value="Send" />
-				</div>
-			</form>
-		</article>
+		</form>
+	</article>
 
 		<div id="message" class="hide">
 			<p id="header"></p>
@@ -70,6 +68,7 @@
 			<a href="https://validator.w3.org/check?uri=referer">Valid HTML 5 || </a>
 			<a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
 		</footer>
+		<script src='script.js'></script>
 	</body>
 
 	</html>
