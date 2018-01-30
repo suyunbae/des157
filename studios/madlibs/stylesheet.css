@@ -64,14 +64,14 @@
 
 	/*Form */
 
-	article {
+	form {
 	  font-family: 'Helvetica', sans-serif;
 	  color: #444;
 	  text-align: right;
 		font-weight: 700;
 	}
 
-	article div {
+	form div {
 	  padding-top: 15px;
 	}
 
