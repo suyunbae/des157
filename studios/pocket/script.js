@@ -1,4 +1,5 @@
-‘use strict’;
+
+'use strict';
 
 var Boxlayout = function() {
   // Get the necessary elements in the document
