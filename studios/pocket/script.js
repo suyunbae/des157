@@ -3,21 +3,21 @@
 
 var Boxlayout = function() {
   // Get the necessary elements in the document
-  var wrapper = document.body,
-      sections = Array.from(document.querySelectorAll('.section')),
-      closeButtons = Array.from(document.querySelectorAll('.close-section')),
-      expandedClass = 'is-expanded',
-      hasExpandedClass = 'has-expanded-item',
-      pencil = document.getElementById('pencil'),
-      laptop = document.getElementById('laptop'),
-      eyedrop = document.getElementById('eyedrop'),
-      text1 = document.getElementById('text1');
-      text2 = document.getElementById('text2');
-      text3 = document.getElementById('text3');
+  var wrapper = document.body;
+  var sections = Array.from(document.querySelectorAll('.section'));
+  var closeButtons = Array.from(document.querySelectorAll('.close-section'));
+  var expandedClass = 'is-expanded';
+  var hasExpandedClass = 'has-expanded-item';
+  var pencil = document.getElementById('pencil');
+  var laptop = document.getElementById('laptop');
+  var eyedrop = document.getElementById('eyedrop');
+  var text1 = document.getElementById('text1');
+  var text2 = document.getElementById('text2');
+  var text3 = document.getElementById('text3');
 
 
-    var w = window.innerWidth;
-    var h = window.innerHeight;
+  var w = window.innerWidth;
+  var h = window.innerHeight;
 
   return { init : init };
 
@@ -45,14 +45,15 @@ var Boxlayout = function() {
     if ( ! element.classList.contains(expandedClass) ) {
       element.classList.add(expandedClass);
       wrapper.classList.add(hasExpandedClass);
-      console.log("#1");
-      var pencil = document.getElementById('pencil');
+      console.log("how about this one");
+
       text1.style.display = 'block';
       text2.style.display = 'block';
       text3.style.display = 'block';
 
-      if( w >= 1366 ){
-        console.log("hello");
+      if( w >= 1000 ){
+        console.log("hi");
+
         pencil.style.height = '450px';
         pencil.style.marginLeft = '239px';
         pencil.style.marginTop = '10%';
@@ -65,9 +66,7 @@ var Boxlayout = function() {
         eyedrop_ipad.style.height = '450px';
         eyedrop_ipad.style.marginLeft = '239px';
         eyedrop_ipad.style.marginTop = '12%';
-        // console.log(pencil);
-        // pencil.removeAttribute("pencil");
-        // pencil.setAttribute("id", "pencil-desktop");
+
 
         text1.style.width = '30%';
         text1.style.marginTop = '-25%';
