@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 
 body {
@@ -16,7 +17,7 @@ img{
   padding-top: 30px;
 }
 
-/*typography*/ 
+/*typography*/
 a {
     color: lightslategrey;
     text-decoration: none;
@@ -41,6 +42,11 @@ h2{
   margin-bottom: 30px;
 }
 
+#text{
+  font-family: 'Lato';
+  line-height: 1.5em;
+}
+
 /*sections*/
 
 div {
@@ -49,7 +55,9 @@ div {
     margin-left: 118px;
     border-style: none;
 }
-
+.text{
+  font-family: 'Open Sans';
+}
 
 section {
     width: 700px;
@@ -63,7 +71,7 @@ ul {
   padding-left: 0;
 }
 
-/*p5 banner */ 
+/*p5 banner */
 
 #mySketch{
   background-color: orange;
