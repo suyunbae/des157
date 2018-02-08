@@ -251,13 +251,13 @@ footer {
   width: 100%;
   overflow:hidden;
   z-index: 100;
+  font-family: 'Roboto';
   /* background-color: yellow; */
 }
 
 footer a:link {
   text-decoration: none;
   color: #F3F3F3;
-  font-family: 'Roboto';
   font-weight: 700;
   margin-top: 5%;
 }
