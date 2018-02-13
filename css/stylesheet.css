@@ -47,6 +47,12 @@ h2{
   line-height: 1.5em;
 }
 
+.audience li{
+  font-family: 'Lato';
+  line-height: 1.5em;
+  color: black;
+  list-style: circle;
+}
 /*sections*/
 
 div {
