@@ -23,7 +23,6 @@
     font-family: 'Ubuntu';
     font-size: 35px;
     font-weight: 700;
-    font-color: #282828;
   }
   #author{
     margin-top: -20px;
@@ -40,7 +39,6 @@
   .container{
     width: 70%;
     margin: 0 auto;
-    align: center;
   }
 
 .container p{
@@ -102,8 +100,8 @@ footer {
 }
 
 .footer_contents{
-  height: 10%; // Replace with the height your footer should be
-  width: 1000px; // Visible width of footer
+  height: 10%;
+  width: 1000px; 
   margin: auto;
   text-align: right;
   color: black;
