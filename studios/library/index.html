@@ -1,0 +1,158 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <title>INVESTING MEDICARE HOSPITALS IN THE UNITED STATES</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <link href="https://cdn.jsdelivr.net/npm/normalize.css@7.0.0/normalize.min.css" rel="stylesheet">
+  <link href="./css/stylesheet.css" rel="stylesheet">
+  <link href="./css/scroll.css" rel="stylesheet">
+  <link href="./css/map.css" rel="stylesheet">
+  <link href="./css/boxplot.css" rel="stylesheet">
+  <link href="./css/parallel_coordinates.css" rel="stylesheet">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src='https://unpkg.com/scrollama'></script>
+</head>
+
+<body>
+  <section id='scroll'>
+    <!--  graphic container  -->
+    <div class='scroll__graphic'>
+      <!--   actual graphic/chart   -->
+      <div class="chart">
+        <div id="tooltip"></div><!-- div to hold tooltip. -->
+        <div id="legend-map" style="position: absolute; top: -100px; left: 300px;">
+          <div class="legend">
+            <div class="legend-color" style="background-color: #2c7bb6;"></div>
+            <div class="legend-desc">Average rating > 3.6</div>
+          </div>
+          <div class="legend">
+            <div class="legend-color" style="background-color: #abd9e9;"></div>
+            <div class="legend-desc">Average rating > 3.2</div>
+          </div>
+          <div class="legend">
+            <div class="legend-color" style="background-color: #ffffbf;"></div>
+            <div class="legend-desc">Average rating > 2.8</div>
+          </div>
+          <div class="legend">
+            <div class="legend-color" style="background-color: #fdae61;"></div>
+            <div class="legend-desc">Average rating > 2.4</div>
+          </div>
+          <div class="legend">
+            <div class="legend-color" style="background-color: #d7191c;"></div>
+            <div class="legend-desc">Average rating &le; 2.4</div>
+          </div>
+          <div class="legend">
+            <div class="legend-color" style="background-color: #000000;"></div>
+            <div class="legend-desc">Average rating is unknown</div>
+          </div>
+        </div>
+        <div id="legend-2" style="position: absolute; top: 417px; left: 40px; opacity: 0;">
+          <div class="legend">
+            <div class="legend-color" style="background-color: #2c7bb6;"></div>
+            <div class="legend-desc">Average rating > 3.6</div>
+          </div>
+          <div class="legend">
+            <div class="legend-color" style="background-color: #abd9e9;"></div>
+            <div class="legend-desc">Average rating > 3.2</div>
+          </div>
+          <div class="legend">
+            <div class="legend-color" style="background-color: #ffffbf;"></div>
+            <div class="legend-desc">Average rating > 2.8</div>
+          </div>
+          <div class="legend">
+            <div class="legend-color" style="background-color: #fdae61;"></div>
+            <div class="legend-desc">Average rating > 2.4</div>
+          </div>
+          <div class="legend">
+            <div class="legend-color" style="background-color: #d7191c;"></div>
+            <div class="legend-desc">Average rating &le; 2.4</div>
+          </div>
+          <div class="legend">
+            <div class="legend-color" style="background-color: #000000;"></div>
+            <div class="legend-desc">Average rating is unknown</div>
+          </div>
+        </div>
+
+        <div id="description" style="position: absolute; top: 417px; left: 214px; opacity: 0;">
+          <div class="legend">
+            <div class="legend-desc">1: Government - Hospital District or Authority</div>
+            <div class="legend-desc">2: Government - Local</div>
+            <div class="legend-desc">3: Government - State</div>
+            <div class="legend-desc">4: Government - Federal</div>
+            <div class="legend-desc">5: Voluntary non-profit - Private</div>
+            <div class="legend-desc">6: Voluntary non-profit - Church</div>
+            <div class="legend-desc">7: Voluntary non-profit - Other</div>
+            <div class="legend-desc">8: Tribal</div>
+            <div class="legend-desc">9: Proprietary</div>
+            <div class="legend-desc">10: Physician</div>
+          </div>
+        </div>
+        <svg width="720" height="450" id="statesvg"></svg> <!-- svg to hold the map. -->
+      </div>
+
+      <!--Scropts MUST be called here in order for the scrollama to work !-->
+      <!--This is intention!-->
+
+      <script src="./js/uStates.js"></script> <!-- creates uStates. -->
+      <script src='./js/map.js'></script>
+      <script src='./js/util.js'></script>
+      <script src='./js/boxplot.js'></script>
+      <script src='./js/boxplot_script.js'></script>
+      <script src='./js/parallel.js'></script>
+      <script src='./js/scrollOptions.js'></script>
+    </div>
+
+    <!--  step/text container  -->
+    <div class='scroll__text'>
+      <div class='step'>
+        <h2 class="question">1. Which State Provides the Best Healthcare?</h2>
+        <p>The United States is comprised of 50 states. So initially, it would be interesting to have a high-level understanding of the hospital ratings throughout the nation. For this visualization, a map would be the best representation to see the hospital ratings throughout the nation as whole. For each state, the hospital ratings were aggregated by taking the average. However, it is also important to disclose the minimum and maximum rating of each state as states like New York happen to have a lowest score 1, highest score of 5, yet its average is only 2.32. This shows that states can have varying scores, but it's average shows a better representative of that states' healthcare. From the aggregated average score, we used a color scheme to help easily distinguish the averages throughout the state.
+          <br><br>
+          It is also important to note how many hospitals were used to calculate the average, min, and max. Thus, we have also included the attribute "count" in order to represent the number of hospitals registered in Medicare. For example, states like California and New York have hospitals well over 100, but South Dakota, a state with one of the best healthcare, has only 60. This is something to consider about as we interact with the map and not assume that every state has the same number of hospitals.
+        </p>
+      </div>
+      <div class='step'>
+        <h2 class="question">2. What is the analysis of the best and worst states?</h2>
+        <p>Now that we have a better understanding of the distribution of hospital ratings throughout the nation, let's analyze them. In this case, we will use a boxplot to analyze two of the best and worst states in terms of hospital rating: New York, Nevada, South Dakota, and Wisconsin. Utilizing a box plot helps better understand the hospital rating distributions for each state. For example, by placing each box plot next to each other, we can see that both New York and Nevada (the worst states) have a minimum score of 1, while the minimum scores of South Dakota and Wisconsin (the best states) are 2 and 3 respectively. With the blue strip across the box plot to represent the median, we can generally state the latter two states have a better hospital rating than former states.
+          <br><br>
+          In addition, the box plot allows us to see outliers from the quantiles. In the previous visualization, we mentioned that New York's highest score was 5. However, at that time, we didn't have any additional information as to how many hospitals in New York were rated 5. By now, we can see that this score of 5 is actually a sole outlier to New York's overall performance.
+        </p>
+      </div>
+      <div class='step' id="special">
+        <h2 class="question">3. Which attributes correlate with a better healthcare rating?</h2>
+        <p>Since we now have a better understanding of the hospital rating distributions, it's logical to ask, "What makes a good hospital"? What is it about the hospitals from South Dakota or Wisconsin that makes them stand out compared to that of other states.  To answer this question, we used a parallel coordinates visualization to help us gain a holistic understanding of how an effective hospital runs. A parallel coordinates visualization is effective as it allows multiple attributes to be grasped in one whole view. <br><br>
+
+          Most of the attributes in the original data were categorical: "Below the national average", "Same as the national average," and "Above the national average". Because parallel coordinates are traditionally used with quantitative attributes, these values were translated to a 1 - 3 system. Attributes that were "Below" were given the value 1, "Same" as 2, and "Above" and 3. In addition, hospital ownership were also translated to numeric values. Please look at the legend of the parallel coordinates system to have a better understanding.<br><br>
+
+          Using the same colors as the interactive map, we can see that hospitals with a rating of 1 all show that they are either "Same" or "Below" the national average in terms of patient care. There is not one single hospital that was given "Above". Following this path, we can generally see that hospitals with a 1 rating also tend to be varied in their effectiveness, timeliness, and use of hospital resources. However, if we look at hospitals with a 5 rating, we can see that the pattern is exactly inversed. There isn't a hospital that received a "Below" on patient care, while the rest are varied as well. This brings into question whether "Patient Care" is main attribute that makes an efficient hospital.
+        </p>
+      </div>
+
+      <div class='step'>
+        <h2 class="question">Conclusion</h2>
+        <p>With these three visualization, we now have a better understanding the hospitals registered in Medicare in the United States. We can see that generally that are more states that average in terms of hospital ratings, while only few states that either exceptional or deemed worst. From this, we have analyzed what makes an efficient hospitals and it seems to be that "Patient Care" is an important attribute as it is the one attribute where hospitals don't receive all three possible scores, only two of the three. <br><br>
+          A main limitation of this visualization is the data itself. From the raw data, we can see that initially there are many missing values. With hospitals that have even one missing value were omitted from the respective dataset. This brings to question about the true accuracy of the visualizations as we are missing information. In addition, it is interesting to note that states like Lousiana and Maryland were completely omitted from the dataset. This deserves further analyzation if Medicare hospitals in either states even exist. <br><br>
+
+          However, we can generally see that there is a trend for hospital care and hospital ratings, and that the best ones are the ones that do focus on the patients needs. </p>
+        </div>
+
+        <div class='step' id='citation'>
+          <h2 class="question">Citation</h2>
+          <p>Data: <a href="https://www.kaggle.com/cms/hospital-general-information/data">https://www.kaggle.com/cms/hospital-general-information/data</a> <br>
+            [1]: <a href="http://www.newsweek.com/united-states-health-care-rated-worst-637114">http://www.newsweek.com/united-states-health-care-rated-worst-637114</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer_contents">
+          <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+        </div>
+      </footer>
+      <script src="./js/app.js"></script>
+    </body>
+
+    </html>
