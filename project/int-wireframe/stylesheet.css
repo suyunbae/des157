@@ -1,0 +1,130 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.analysis {
+  /* position: fixed; */
+  float: right;
+  width: 55%;
+  background-color: WhiteSmoke;
+  height: 100%;
+}
+
+.analysis-explanation {
+  /* position: fixed; */
+  margin: 0 auto;
+  float: left;
+  width: 45%;
+  background-color: white;
+  height: 100%;
+  display: none;
+}
+
+ol li {
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+ol>li:first-child {
+  padding-top: 20%;
+}
+
+.introduction {
+  /* position: fixed; */
+  margin-top: 1%;
+  float: left;
+  width: 45%;
+  background-color: white;
+  height: 100%;
+}
+
+.textbox {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 7%;
+  width: 73%;
+  height: 76%;
+  background-color: gainsboro;
+  /* background: linear-gradient(to bottom, rgb(220, 220, 220, 0), rgb(220, 220, 220, 1)); */
+}
+
+.about-textbox {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 7%;
+  width: 73%;
+  height: 50%;
+  background-color: gainsboro;
+  /* background: linear-gradient(to bottom, rgb(220, 220, 220, 0), rgb(220, 220, 220, 1)); */
+}
+
+.missionbox {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 7%;
+  width: 73%;
+  height: 40%;
+  background-color: gainsboro;
+  /* background: linear-gradient(to bottom, rgb(220, 220, 220, 0), rgb(220, 220, 220, 1)); */
+}
+
+.about {
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+}
+
+.contact {
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+}
+
+.button {
+  position: relative;
+  margin-top: 3%;
+  float: left;
+  width: 17%;
+  height: 5%;
+  background-color: gainsboro;
+  top: 100%;
+  right: 0;
+  border-radius: 7px;
+}
+
+.title {
+  position: relative;
+  left: 14%;
+  top: 3%;
+}
+
+.title-about {
+  position: relative;
+  left: 14%;
+  top: 3%;
+  bottom: 0;
+  padding-top: 15%;
+}
+
+.mission {
+  position: relative;
+  left: 14%;
+  top: 3%;
+  font-size: 25px;
+}
+
+.web {
+  position: relative;
+  left: 14%;
+  top: 3%;
+  font-size: 35px;
+  margin-bottom: 5%
+}
