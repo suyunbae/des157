@@ -33,7 +33,7 @@ em {
 
 nav ul {
   margin: 1rem 0;
-  margin-bottom: 6em;
+  margin-bottom: 3em;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,6 +83,10 @@ h1, h2, strong {
 
 a {
   color: #000000;
+}
+
+#subtext{
+  font-size: 14px;
 }
 
 header {
