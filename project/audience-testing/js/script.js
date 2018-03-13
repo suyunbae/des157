@@ -13,13 +13,16 @@ function myFunction() {
     if (highlight(elm)) {
       //var id = i;
       //var elmWithTag = "<span id=\""  + id + "\">" + elm + "</span>"
+
+      // style='background-color: #a3daff;'
+
       if(elm.toLowerCase() == 'illegal'){
-        elmWithTag = "<span class=\"tooltip\"><span class='highlighted' style='background-color: #a3daff;' onmouseover=\"showCoords(event)\">" + elm + "</span>"+
+        elmWithTag = "<span class=\"tooltip\"><a href=\"#\" class =\"link-1\"><span class='highlighted' onmouseover=\"showCoords(event)\">"+ elm + "</span></a>"+
         "<span class=\"tooltip__content\">" +"<p><strong>Illegal</strong></p>" +
 			  "<p>The word \"illegal\" has been applied and abused by those advocating for harsh immigration policies that are racist and xenophobic. No one is illegal for living.<a href=\"https://www.npr.org/sections/itsallpolitics/2013/01/30/170677880/in-immigration-debate-undocumented-vs-illegal-is-more-than-just-semantics\" target=\"_blank\"> link</a></p></span>";
       }
       else if (elm.toLowerCase() == 'bitch') {
-        elmWithTag = "<span class=\"tooltip\"><span class='highlighted' onmouseover=\"showCoords(event)\">" + elm + "</span>"+
+        elmWithTag = "<span class=\"tooltip\"><a href=\"#\" class =\"link-1\"><span class='highlighted' onmouseover=\"showCoords(event)\">"+ elm + "</span></a>"+
         "<span class=\"tooltip__content\">" +"<p><strong>Bitch</strong></p>" +
 			  "<p>The word \"bitch\" is a word which is used culturally to describe any woman who is outspoken, or strong, or uncompromising, in a derogatory manner. <a href=\"https://www.bustle.com/articles/122081-the-one-sexist-microaggression-youre-probably-committing-daily-and-why-we-need-to-stop-using\" target=\"_blank\">link</a></p></span>";
       }
