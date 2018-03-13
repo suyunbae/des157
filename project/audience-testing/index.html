@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Check Yourself!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.csss"> -->
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Inconsolata:400,700'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lato:300,400,700'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- highlight-within-textarea CSS/JS -->
+  <link href="css/jquery.highlight-within-textarea.css" rel="stylesheet">
+  <script src="js/jquery.highlight-within-textarea.js"></script>
+  <link href="css/highlight.css" rel="stylesheet">
+  <link href="css/tooltip.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/stylesheet.css">
+
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+
+  <nav role="navigation">
+    <ul>
+      <li><a href="#the-default-view">Home</a></li>
+      <li><a href="#gc">About</a></li>
+    </ul>
+  </nav>
+
+  <main role="main" class="app">
+
+    <section id="nes">
+      <h2 class="title">Analyze This!</h2>
+
+      <div class="container">
+        <!-- <div class="textbox"> -->
+        <img src="../../image/construction.jpg">
+        <textarea row="45" placeholder="Click to either type or paste your response"></textarea>
+
+        <!-- <div class="button" id="submit"> -->
+        <form action="#n64">
+          <button class="button" value="Submit">Analyze!</button>
+        </form>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </section>
+
+    <section id="n64">
+      <div class="container">
+
+        <aside class="d1">
+          <p id="demo"></p>
+          <!-- <textarea class="analysis" row="45" placeholder="Click to either type or paste your response"></textarea> -->
+        </aside>
+        <aside class="d3">
+          <ol>
+            <li>Thing 1</li>
+            <li>Thing 2</li>
+            <li>Thing 3</li>
+            <li>Thing 4</li>
+            <li>Thing 5</li>
+            <li>Thing 6</li>
+          </ol>
+
+          <p style="margin-left: 51px; margin-right: 51px;">More explanations about the writing coming soon!</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="gc">
+      <div class="container">
+        <h1>UNDER CONSTRUCTION</h1>
+        <p>We will discuss the idea of microagression, how words can deeply affect us, and why this website was created.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </section>
+
+    <section id="the-default-view">
+      <div class="container">
+        <h2 class="title">Analyze This!</h2>
+        <img src="../../image/construction.jpg">
+        <textarea class="string-example" id="myTextarea" row="45" placeholder="Click to either type or paste your response"></textarea>
+        <!-- <script>
+          $('.string-example').highlightWithinTextarea({
+              highlight: [
+                  {
+                      highlight: 'bitch',
+                      className: 'red'
+                  },
+                  {
+                      highlight: 'blueberry',
+                      className: 'blue'
+                  },
+                  {
+                      highlight: /ba(na)*/gi,
+                      className: 'yellow'
+                  }
+              ]
+          });
+          </script> -->
+        <!-- <div class="button" id="submit"> -->
+        <form action="#n64">
+          <button class="button" onclick="myFunction()">Analyze!</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
