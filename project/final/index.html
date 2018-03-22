@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Check Yourself!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.csss"> -->
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Inconsolata:400,700'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lato:300,400,700'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- highlight-within-textarea CSS/JS -->
+  <link href="css/jquery.highlight-within-textarea.css" rel="stylesheet">
+  <script src="js/jquery.highlight-within-textarea.js"></script>
+  <link href="css/highlight.css" rel="stylesheet">
+  <link href="css/tooltip.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+
+  <nav role="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#gc">About</a></li>
+    </ul>
+  </nav>
+
+  <main role="main" class="app">
+
+    <section id="gc">
+      <div class="container">
+        <p id="expression">"The pen is mightier than the sword"</p>
+        <p>There is an expression called "the pen is mightier than the sword". And for obvious reasons — words are powerful. The implication of the words we choose can cut deep and sink in swiftly, or it can reveal itself at a measured pace.
+          But language is also a complex and ever-changing system, and sometimes we don't even realize the things we're saying are harmful and oppressive to other people, but that's where microaggression stems from.
+
+          Often, they are never meant to hurt - acts done with little conscious awareness of their meanings and effects. Instead, their slow accumulation during a childhood and over a lifetime is in part what defines a marginalized experience, making explanation and communication with someone who does not share this identity particularly difficult. Social others are microaggressed hourly, daily, weekly, monthly.
+          <br><br>This project is NOT about showing how ignorant people can be in order to simply dismiss their ignorance. Instead, it is about showing how these comments create and enforce uncomfortable, violent and unsafe realities onto peoples' workplace, home, school, childhood/adolescence/adulthood, and public transportation/space environments.</p>
+
+        </p>
+      </div>
+    </section>
+
+    <section id="the-default-view">
+      <div class="container">
+        <p id="subtext"><strong>Check Yourself!</strong> is about checking one's language and making sure they are not reinforcing microagressions with their words. It is aimed to inform folks about the harmful language they might use, but also an interactive way to be more reflective of our language.</p>
+
+
+        <h2 class="title">Analyze This!</h2>
+          <div class="picture-container">
+            <img id='picture' src="https://gallery.mailchimp.com/6d5e686af3a776f67a79d56e6/images/1db61e28-9379-4773-9a94-3c79ef1152dd.gif">
+            <p id="welcome">WELCOME!<br><span>Try inputting some words!</p>
+
+          </div>
+          <span class="tooltip">
+            <textarea class="string-example" id="myTextarea" row="45" placeholder="Click to either type or paste your response"></textarea>
+            <span class="tooltip__content">
+        			<p><strong>Not sure what to write?</strong></p>
+        			<p>Try one of the following!</p>
+        			<p>1. Mary is an illegal immigrant <br>
+                2. She's such a bitch
+              </p>
+        		</span>
+      	  </span>
+          <button class="button" id="button" onclick="myFunction()">Analyze!</button>
+      </div>
+
+
+
+      <div id="explanation">
+          <aside id="d1"><p id="demo"></p></aside>
+          <aside id= "d3">
+            <p id="t-explanation">Click on any of the highlighted words to learn more about their connotations!</p>
+          </aside>
+
+          <div class="bottomright">
+            <button class="button" id="restart" onclick="window.location.reload()">Try another one!</button>
+          </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+  <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5 || </a>
+  <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
