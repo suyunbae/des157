@@ -5,9 +5,6 @@ var button = document.getElementById('button');
 var picture = document.getElementById('picture');
 var welcome = document.getElementById('welcome');
 
-/*function for using fade out*/
-/*use setTimeout*/
-
 function fadeOut(el1, time) {
   el1.style.opacity = 1;
 
@@ -24,8 +21,6 @@ function fadeOut(el1, time) {
   tick();
 }
 
-/*function for using fade in*/
-/*use setTimeout*/
 
 function fadeIn(el1, time) {
   el1.style.opacity = 0;
@@ -43,7 +38,6 @@ function fadeIn(el1, time) {
   tick();
 }
 
-/*recognizing the words from the string*/
 
 function myFunction() {
   var textarea = document.getElementById("myTextarea");
@@ -106,7 +100,6 @@ function myFunction() {
   }
 }
 
-/*creting the HTML elements*.
 
 function createElementFromHTML(htmlString) {
   var span = document.createElement('span');
@@ -123,7 +116,6 @@ function highlight(word){
 }
 
 
-/*toggle the highlights for the words */
 
 function toggleHighlight() {
     // console.log("hi");
