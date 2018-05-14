@@ -72,20 +72,44 @@ function myFunction() {
 
   var txtWithTag = "";
   var elms = textarea.value.split(' ');
+  // var elms = textarea.value.split(/[ ,.!?]+/);
   for (var i = 0; i < elms.length; i++) {
     var elm = elms[i];
+    var elm2 = "";
+    var elm3 = "";
+    if (i < elms.length - 1) {
+      elm2 = elms[i+1];
+      elm3 = elms[i+2];
+    }
+
+    if (elm.toLowerCase() == 'no' && elm2.toLowerCase() == 'homo' ) {
+      elm = elm + " " + elm2;
+      i++; // skip next loop
+    }
+    if (elm.toLowerCase() == 'that\'s' && elm2.toLowerCase() == 'so' && elm3.toLowerCase() == 'gay' ) {
+      elm = elm + " " + elm2 + " " + elm3;
+      i+=2; // skip next loop
+    }
+
+    var specialWord = ""
+    if (elm.slice(-1) == "," || elm.slice(-1) == "." || elm.slice(-1) == "?" || elm.slice(-1) == "!" ) {
+      specialWord = elm.slice(-1);
+      elm = elm.slice(0, -1);
+    }
+
     var elmWithTag;
+
     if (highlight(elm)) {
 
-      if(elm.toLowerCase() == 'illegal' || elm.toLowerCase() == 'bitch' || elm.toLowerCase() == 'ghetto' || elm.toLowerCase() == 'retarded' || elm.toLowerCase() == 'lame'|| elm.toLowerCase() == 'no homo' || elm.toLowerCase() == 'whore' || elm.toLowerCase() == 'hoe' ){
-        elmWithTag = "<a href=\"#\" class =\"foo link-1\"><span class='highlighted'  id=\"word\"  onclick=\"toggleHighlight(this)\">"+ elm + "</span></a>";
+      if(elm.toLowerCase() == 'illegal' || elm.toLowerCase() == 'bitch' || elm.toLowerCase() == 'ghetto' || elm.toLowerCase() == 'retarded' || elm.toLowerCase() == 'no homo' || elm.toLowerCase() == 'that\'s so gay' || elm.toLowerCase() == 'whore' || elm.toLowerCase() == 'hoe' ){
+        elmWithTag = "<a href=\"#\" class =\"foo link-1\"><span class='highlighted'  id=\"word\"  onclick=\"toggleHighlight(this)\">"+ elm + "</span>" + specialWord + "</a>";
       }
       else {
-        elmWithTag = "<span class='highlighted'>" + elm + "</span>";
+        elmWithTag = "<span class='highlighted'>" + elm + specialWord + "</span>";
       }
     }
     else {
-      elmWithTag = "<span class='non-highlighted'>" + elm + "</span>";
+      elmWithTag = "<span class='non-highlighted'>" + elm + specialWord + "</span>";
     }
     txtWithTag += elmWithTag + " ";
     console.log(txtWithTag);
@@ -105,7 +129,8 @@ function createElementFromHTML(htmlString) {
 }
 
 function highlight(word){
-  var result = word.match(/illegal|bitch|ghetto|retarted|lame|whore|slut|hoe|no homo/i);
+  var result = word.match(/illegal|bitch|ghetto|retarted|lame|whore|slut|hoe|no|homo|that|so|gay/i);
+  console.log(result);
   return result;
   // console.log(result)
 }
@@ -148,6 +173,12 @@ function toggleHighlight(thisDom) {
         }
         else if(word.innerHTML == 'slut'){
           explanation.innerHTML = "The word <strong>\"slut\"</strong> dismisses anyone seen as being “too” sexual —particular sex workers, women, queer people, and people of color. Perpetuates negativity towards sex itself. Regulates who is allowed to have it";
+        }
+        else if(word.innerHTML == 'that\'s so gay'){
+          explanation.innerHTML = "The phrase <strong>\"that\'s so gay\"</strong> stigmatizes gay and queer people. Uses their identities to describe something as undesirable and bad. Replaces negative adjectives with words related to queer/LGBT identity.";
+        }
+        else if(word.innerHTML == 'no homo'){
+          explanation.innerHTML = "The phrase <strong>\"no homo\"</strong> stresses the speaker’s heterosexuality, masculinity, and/or other traits to avoid being perceived as gay/queer. Goes to great lengths to avoid association with anything queer, and ultimately reinforces the notion that queer is a negative characteristic.";
         }
     }
 }
